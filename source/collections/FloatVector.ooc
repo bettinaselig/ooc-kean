@@ -14,8 +14,9 @@
 * You should have received a copy of the GNU Lesser General Public License
 * along with this software. If not, see <http://www.gnu.org/licenses/>.
 */
-import VectorList
 import math
+import VectorList
+import FloatComplexList
 FloatVector: class extends VectorList<Float> {
 	init: func ~default {
 		this super()
@@ -104,6 +105,12 @@ FloatVector: class extends VectorList<Float> {
 		result := ""
 		for (i in 0..this _count)
 			result = result >> this[i] toString() >> "\n"
+		result
+	}
+	toFloatComplexList: func -> FloatComplexList {
+		result := FloatComplexList new()
+		for (i in 0..this _count)
+			result add(FloatComplex new(this[i], 0))
 		result
 	}
 }
