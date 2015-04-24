@@ -18,7 +18,7 @@ use ooc-collections
 import FloatPoint2D
 import FloatVector
 
-FloatPoint2DList: class extends VectorList<FloatPoint2D> {
+FloatPoint2DVectorList: class extends VectorList<FloatPoint2D> {
 	init: func ~default {
 		this super()
 	}

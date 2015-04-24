@@ -18,7 +18,7 @@ import FloatComplex
 use ooc-collections
 import FloatVector
 
-FloatComplexList: class extends VectorList<FloatComplex> {
+FloatComplexVectorList: class extends VectorList<FloatComplex> {
 	init: func ~default {
 		super()
 	}

@@ -17,7 +17,7 @@
 use ooc-collections
 import math
 import FloatComplex
-import FloatComplexList
+import FloatComplexVectorList
 FloatVector: class extends VectorList<Float> {
 	init: func ~default {
 		this super()
@@ -108,8 +108,8 @@ FloatVector: class extends VectorList<Float> {
 			result = result >> this[i] toString() >> "\n"
 		result
 	}
-	toFloatComplexList: func -> FloatComplexList {
-		result := FloatComplexList new()
+	toFloatComplexVectorList: func -> FloatComplexVectorList {
+		result := FloatComplexVectorList new()
 		for (i in 0..this _count)
 			result add(FloatComplex new(this[i], 0))
 		result
